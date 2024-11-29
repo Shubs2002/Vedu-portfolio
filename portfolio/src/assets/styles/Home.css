@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DynaPuff:wght@400..700&family=Ephesis&family=Parisienne&display=swap');
+
+.section-home {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    /* animation: fadeIn 1.5s ease-in-out forwards; */
+
+}
+
+.primarycol-section-in-home {
+    background-color: var(--primary-color);
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.sec-color-sec-in-home {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem;
+    /* padding-top: 12rem; */
+    /* align-items: center; */
+    /* background-color: black; */
+    justify-content: center;
+    color: white;
+    padding-right: 15rem;
+    /* animation-delay: 0.1s; */
+}
+
+p {
+    margin-top: 0%
+}
+
+.name-in-home {
+    /* font-family: "Bebas Neue", serif; */
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4.4rem;
+    margin: 0%;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+.primary-col-in-name{
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 0.75rem var(--dropshadow-primary-color));
+}
+
+.person-Image-home {
+    background-image: url("../Images/Vedika-img-without-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    position: absolute;
+    width: 28rem;
+    height: 28rem;
+    left: -60%;
+    /* top: 8%; */
+    /* position: relative; */
+    border-radius: 50%;
+    cursor: pointer;
+    
+    /* filter:drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.266)); */
+    /* box-shadow: 0px 2px 20px rgb(0, 0, 0), 0 -2px 20px black; */
+    /* z-index: 2; */
+    /* opacity: 1; */
+}
+.person-Image-home::after {
+    content: '';
+    position: absolute;
+    width: 28rem;
+    height: 28rem;
+    z-index: -2;
+    padding: 10px;
+    /* filter: blur(px); */
+    background-image: repeating-conic-gradient(from var(--angle), transparent 0deg 60deg, var(--primary-color) 60deg 120deg);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    /* filter: blur(2px); */
+     /* Default spin */
+    /* animation-fill-mode: forwards; */
+}
+
+.person-Image-home:hover::after {
+    animation: FrameImgAF 0.2s linear forwards; /* Hover-specific animation */
+}
+
+.person-Image-home::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    width: 28rem;
+    height: 28rem;
+    background-image: repeating-conic-gradient(from var(--angle), var(--primary-color) 0deg 60deg, transparent 60deg 120deg);
+     /* Default spin */
+    /* animation-fill-mode: forwards; */
+    /* box-shadow: 0 0 25px var(--); */
+    filter: blur(5px);
+    padding: 3.5px;
+}
+
+.person-Image-home:hover::before {
+    animation: FrameImgBf 0.2s linear forwards; /* Hover-specific animation */
+}
+
+.person-Image-home:not(:hover)::after
+ {
+    animation: reverseFrameAF 0.4s linear forwards; /* Resume spinning after hover ends */
+}
+.person-Image-home:not(:hover)::before{
+    animation: reverseFrameBF 0.4s linear forwards;
+}
+
+@keyframes FrameImgAF {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 60deg;
+    }
+}
+
+@keyframes FrameImgBf {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: -60deg;
+    }
+}
+@keyframes reverseFrameAF {
+    from {
+        --angle: 60deg;
+    }
+    to {
+        --angle: 0deg;
+    }
+}
+
+@keyframes reverseFrameBF {
+    from {
+        --angle: -60deg;
+    }
+    to {
+        --angle: 0deg;
+    }
+}
+.main-designation-name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.8;
+    max-width: 1000px;
+    animation: slideIn 0.5s ease-in-out forwards;
+    animation-delay: 0.1s;
+}
+.main-designation-name span{
+    position: relative;
+}
+.main-designation-name span::before{
+    content: '';
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 0.75rem var(--dropshadow-primary-color));
+    animation: words 20s infinite;
+}
+.main-designation-name span::after{
+    content: '';
+    padding-bottom: 10px;
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+    /* filter:none ; */
+    /* filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0)); */
+    /* z-index: -2; */
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--primary-color);
+    }
+    
+}
+
+@keyframes words {
+    0%,20%{
+        content: 'Web Devloper';
+    }
+    21%,40%{
+        content: 'Frontend Designer';
+    }
+    
+    41%,60%{
+        content: 'UI / UX Designer';
+    }
+
+    61%,80%{
+        content: 'Computer Engineer';
+    }
+    81%,100%{
+        content: 'Software Developer';
+    }
+}
+
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+
+.aboutme-home{
+    font-weight: 700;
+    color: rgb(110, 110, 110);
+    font-size: 0.9rem;
+    margin-top: 1.9rem;
+    margin-bottom: 0.9rem;
+    animation: slideIn 0.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+.designation {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border-radius: 6px;
+    height: 50px;
+    position: relative;
+    background-color: black;
+    cursor: pointer;
+    /* animation: shineAnimation 2s infinite ease-in-out alternate-reverse; */
+    /* animation: slideIn 0.5s ease-in; */
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.designation::after,
+.designation::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent, transparent, transparent, var(--primary-color), transparent, transparent, transparent, transparent, transparent, transparent, var(--primary-color), transparent, transparent, transparent);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    border-radius: 6px;
+    animation: spin 8s linear infinite;
+    /* animation-delay: 1s; */
+}
+
+.designation::before {
+    filter: blur(1.5rem);
+    opacity: 0.3;
+    animation: glow 3s ease-in infinite alternate;
+}
+/* .designation:hover::before{
+    animation-play-state: paused;
+}
+.designation:hover::after{
+    animation-play-state: paused;
+} */
+@keyframes spin {
+    from {
+        --angle: 0deg;
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        /* Smooth acceleration and deceleration */
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+@keyframes glow {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.designation>* {
+    margin: 0;
+}
+
+.designation-name {
+
+    padding: 13px 20px;
+    font-size: 1rem;
+}
+
+/* .person-Image{
+    background-image: url('../Images/Vedika-img-without-bg.png');
+    width: 50px;
+    height: 50px;
+} */
+.skill-set-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    /* width: 40px; */
+    /* margin-top: 10px; */
+}
+
+.tech-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.2s ease-in-out;
+    /* border-top-right-radius: 6px; */
+}
+
+/* From Uiverse.io by mrhyddenn */ 
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* transform: translateY(20px); */
+    }
+    to {
+        opacity: 1;
+        /* transform: translateY(0); */
+    }
+}

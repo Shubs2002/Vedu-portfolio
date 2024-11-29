@@ -1,0 +1,220 @@
+
+.section-aboutme {
+    width: 100vw;
+    height: 100vh;
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* padding-top: 5rem; */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    /* padding-right: 5rem; */
+}
+.section-aboutme.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+.aboutmeimg{
+    /* width: 500px ; */
+    /* height: 500px; */
+    background-image: url('../Images/Aboutme.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:  flex-start;
+    padding: 20%;
+    /* border: 1px solid red; */
+}
+
+.aboutme-details{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    padding: 12rem;
+    /* text-align: center; */
+}
+.internal-border-in-about-details{
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 3rem;
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.internal-border-in-about-details::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 50px;
+    padding: 1px;
+    filter: blur(16px);
+    animation: glowabtme 2.6s linear infinite alternate;
+
+}
+
+@keyframes glowabtme {
+    to{
+        filter: blur(8px);
+
+    }
+    
+}
+.internal-border-in-about-details img{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    translate: 10% -50%;
+    z-index: 0;
+
+}
+.aboutme-details h1{
+color: var(--text-color);
+margin: 0;
+font-weight: 800;
+font-size: 2rem;
+}
+.aboutme-details p{
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: rgb(110, 110, 110);
+    margin-top: 2rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.socials{
+    display: flex;
+    /* flex-wrap: wrap; */
+    position: absolute;
+    /* left: 10%; */
+    /* top: 17%; */
+    height: 100px;
+    /* border: 1px solid red; */
+    width: fit-content;
+    /* border: 1px solid red; */
+    
+}
+
+.socials a {
+    color: var(--primary-color);
+    width: fit-content;
+    height: fit-content;
+    font-size: small;
+    padding: 25%;
+ 
+    
+}
+.social-icons{
+    /* font-size: 1.5rem !important; */
+
+}
+
+.socials a:nth-child(even){
+
+    align-self: flex-start;
+    transition: all 1s ease-in-out;
+
+}
+.socials a:nth-child(odd){
+    /* justify-self: flex-end ; */
+    align-self: flex-end ;
+    transition: all 1s ease-in-out;
+   
+}
+
+.social-icons {
+    transition: all 1s ease-in-out;
+    animation: wobble 1.5s infinite, glowsocialicons 3s infinite alternate;
+}
+
+/* Define the wobble animation */
+@keyframes wobble {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.social-icons:hover {
+    animation: wobble-hover 0.5s infinite;
+}
+
+@keyframes wobble-hover {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.social-icons:hover{
+    /* transform: scale(1.1); */
+    filter: drop-shadow(0 0 0.5rem var(--primary-color));
+}
+
+
+@keyframes glowsocialicons {
+    from{
+        filter: drop-shadow(0 -3mm 4mm var(--primary-color));
+    }
+
+    to{
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+    }
+    
+}
+
+.resume a {
+    width: fit-content;
+    text-decoration: none;
+    color: rgb(13, 57, 96);
+    font-weight: 800;
+    background-color: var(--primary-color);
+    padding: 5px 15px ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgb(13, 57, 96);
+    transition: all 0.2s ease-in;
+    
+}
+
+.resume a:hover{
+    background-color: var(--dropshadow-primary-color);
+}
+.resume{
+    position: relative;
+    /* border: 1px solid red; */
+    width: fit-content;
+}

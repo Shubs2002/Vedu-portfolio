@@ -1,0 +1,250 @@
+.education-section {
+    padding: 50px;
+    background-color: black;
+    color: white;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  
+  .education-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+  }
+  
+  .education-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    /* animation: fadeIn 1s ease-out forwards; */
+    /* animation-delay: calc(0.2s * var(--step-index)); */
+    /* position: relative; */
+    width: 70%;
+    opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .education-step.reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .step-marker {
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary-color);
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .step-content {
+        background: #1e1e1e;
+        /* border: 2px solid var(--primary-color); */
+        /* filter: drop-shadow(0 0 0.5rem var(--dropshadow-primary-color)); */
+        box-shadow: 0 0 10px 1px var(--dropshadow-primary-color);
+        padding: 20px;
+        border-radius: 5px;
+        /* flex: 1; */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+        width:100%;
+        height: 180px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* justify-items: end; */
+        /* z-index: -1000; */
+    }
+    .step-content::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* justify-self: center; */
+      /* align-self: center; */
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      background-color: var(--dropshadow-primary-color);
+      border-radius: 5px;
+      z-index: -1;
+      filter: blur(5px);
+      /* opacity: 1; */
+      transition: opacity 0.3s ease-in-out;
+      
+    }
+    .step-content:hover{
+        /* transform: scale(1.04); */
+        /* opacity: 0.5; */
+    }
+    .step-content:hover::before{
+        /* display: none; */
+        opacity: 0;
+    }
+    
+  .education-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .education-institution {
+    font-size: 16px;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  .education-details {
+    font-size: 14px;
+    color: #d3d3d3;
+  }
+  
+  .education-year {
+    font-size: 14px;
+    color: var(--primary-color);
+    text-align: right;
+    margin-top: 10px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    /* place-self: flex-end; */
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .loading-line-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Optional for contrast */
+  }
+  
+  .loading-line {
+    /* width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(135, 206, 235, 0) 0%, var(--primary-color) 50%, rgba(135, 206, 235, 0) 100%);
+    animation: loadingEffect 1s ease-out forwards, formLine 1s 1s ease-out forwards; */
+    width: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      rgba(135, 206, 235, 0) 0%,
+      var(--primary-color) 50%,
+      rgba(135, 206, 235, 0) 100%
+    );
+    transition: width 1s ease-in-out;
+  }
+  
+  .loading-line.active {
+    width: 80%;
+  }
+  /* Animation for loading effect */
+  @keyframes loadingEffect {
+    0% {
+      width: 0;
+      background: linear-gradient(90deg, rgba(135, 206, 235, 0) 0%, var(--primary-color) 50%, rgba(135, 206, 235, 0) 100%);
+    }
+    100% {
+      width: 80%; /* Change to desired width */
+    }
+  }
+  
+  /* Transition into a horizontal line */
+  @keyframes formLine {
+    0% {
+      background: linear-gradient(90deg, rgba(135, 206, 235, 0) 0%, var(--primary-color) 50%, rgba(135, 206, 235, 0) 100%);
+    }
+    100% {
+      background: var(--primary-color);
+    }
+  }
+
+  .timeline-container {
+    position: absolute;
+    width: 20px;
+    /* margin: 50px auto; */
+    height: 100%;
+    /* justify-self: center; */
+    /* align-self: center; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    left: 10%;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 0;
+    /* background-color: #87ceeb; */
+    background-image: linear-gradient(to bottom, var(--primary-color),#ffffff25);
+    transition: height 2s ease-in-out;
+  }
+  
+  .timeline-line.grow {
+    height: 80%; /* Adjust based on the desired timeline height */
+  }
+  
+  .timeline-point {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    /* margin-top: 10px; */
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .timeline-point:nth-child(1) {
+    top:0; /* Adjust for the first point */
+  }
+  
+  .timeline-point:nth-child(2) {
+    top: 50%; /* Middle point (adjust spacing as needed) */
+  }
+  
+  .timeline-point:nth-child(3) {
+    top: 100%; /* Last point */
+  }
+  .loading-line {
+   
+  }
+  

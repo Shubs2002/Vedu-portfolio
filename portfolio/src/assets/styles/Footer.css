@@ -1,0 +1,21 @@
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.footer-text{
+    color: rgba(83, 83, 83, 0.663);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.footer-text span{
+    font-size: 1.1rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #55cbfa 25%, rgb(255, 255, 255));
+    background-clip: text;
+    background-color: transparent;
+}
