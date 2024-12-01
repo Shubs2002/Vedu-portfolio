@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Vedu-portfolio/tree/main/portfolio/static/css/main.74a988df.css",
+    "main.js": "/Vedu-portfolio/tree/main/portfolio/static/js/main.a2890e46.js",
+    "static/js/453.1407b060.chunk.js": "/Vedu-portfolio/tree/main/portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/nav-bar-logo.png": "/Vedu-portfolio/tree/main/portfolio/static/media/nav-bar-logo.b0ac8a88fb8df550aaac.png",
+    "static/media/Aboutme.png": "/Vedu-portfolio/tree/main/portfolio/static/media/Aboutme.1d8df43244e526873cb9.png",
+    "static/media/Vedika-img-without-bg.png": "/Vedu-portfolio/tree/main/portfolio/static/media/Vedika-img-without-bg.0e9a798bd9a045b79a71.png",
+    "static/media/Python.png": "/Vedu-portfolio/tree/main/portfolio/static/media/Python.368ff420d152a71031c0.png",
+    "static/media/Canva.png": "/Vedu-portfolio/tree/main/portfolio/static/media/Canva.2a7c80ed029e6af86ef2.png",
+    "static/media/flower.png": "/Vedu-portfolio/tree/main/portfolio/static/media/flower.d4c8273e383110a77b61.png",
+    "static/media/JS.png": "/Vedu-portfolio/tree/main/portfolio/static/media/JS.c397f32bf1f9f0a68212.png",
+    "static/media/vedikaResume.pdf": "/Vedu-portfolio/tree/main/portfolio/static/media/vedikaResume.254623f13a8eb53cce80.pdf",
+    "static/media/Figma.png": "/Vedu-portfolio/tree/main/portfolio/static/media/Figma.81e914fb5f7fed5ab422.png",
+    "static/media/MongoDB.svg": "/Vedu-portfolio/tree/main/portfolio/static/media/MongoDB.71878b738f870a417c999759fb2368a8.svg",
+    "static/media/Html.webp": "/Vedu-portfolio/tree/main/portfolio/static/media/Html.de3b4c4187db7e7992eb.webp",
+    "static/media/logo.svg": "/Vedu-portfolio/tree/main/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Github.svg": "/Vedu-portfolio/tree/main/portfolio/static/media/Github.255db585f8a0eb28a1e4deb91bde207d.svg",
+    "index.html": "/Vedu-portfolio/tree/main/portfolio/index.html",
+    "main.74a988df.css.map": "/Vedu-portfolio/tree/main/portfolio/static/css/main.74a988df.css.map",
+    "main.a2890e46.js.map": "/Vedu-portfolio/tree/main/portfolio/static/js/main.a2890e46.js.map",
+    "453.1407b060.chunk.js.map": "/Vedu-portfolio/tree/main/portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74a988df.css",
+    "static/js/main.a2890e46.js"
+  ]
+}
