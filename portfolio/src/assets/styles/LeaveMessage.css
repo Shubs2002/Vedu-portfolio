@@ -1,0 +1,97 @@
+/* .leave-msg-thumbnail{
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    z-index: 1000; */
+/* } */
+.msg-form{
+    /* opacity: 0; */
+    /* display: none; */
+}
+/* Container for the entire message us feature */
+.leave-msg-container {
+    position: fixed;
+    bottom: 0;
+    right: 3%;
+    /* width: 60px; */
+    /* height: 60px; */
+    background-color: rgba(0, 0, 0, 0.177); 
+    /* border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1000;
+    /* border-radius: 
+    ; */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    /* border: px solid #383838; */
+    /* box-shadow: 0px 0px 2px #545454; */
+    padding-bottom: 5px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+  
+  
+  .leave-msg-container.active {
+    width: 300px;
+    height: 400px;
+    /* background-color: #ffffff; White for the expanded form */
+    background-color: #87cfeb3f;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+#msg-thumbnail{
+    color: #545454; /* Icon color */
+    font-size: 20px;
+    /* padding: 0% !important; */
+  }
+  .msg-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .msg-form label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .msg-form input,
+  .msg-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: tra;
+    font-size: 14px;
+  }
+  
+  .msg-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .msg-form form label{
+    color: rgb(203, 203, 203);
+  }
+  .msg-form input[type='submit'] {
+    background-color: var(--primary-color); /* Grey submit button */
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .msg-form input[type='submit']:hover {
+    background-color: #424242;
+  }
+  
