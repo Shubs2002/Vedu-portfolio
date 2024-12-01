@@ -1,4 +1,5 @@
 {
+  "homepage": "https://shubs2002.github.io/Vedu-portfolio/tree/main/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +15,7 @@
     "animejs": "^3.2.2",
     "ejs": "^3.1.10",
     "emailjs-com": "^3.2.0",
+    "gh-pages": "^6.2.0",
     "nodemailer": "^6.9.16",
     "path": "^0.12.7",
     "react": "^18.3.1",
@@ -22,6 +24,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
