@@ -73,7 +73,7 @@
 
 .navbar-container-logo::before {
   content: '';
-  background-image: url('../Images/nav-bar-logo.png'); /* Replace with your image URL */
+  background-image: url('../Images/nav-bar-logo.png');
   background-size: cover;
   background-position: center;
   filter: grayscale(100%) drop-shadow(0 0 0.75rem #87cfeba4);

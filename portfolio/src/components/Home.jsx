@@ -8,6 +8,7 @@ import Canva from '../assets/Images/Canva.png';
 import MongoDB from '../assets/Images/MongoDB.svg';
 import Python from '../assets/Images/Python.png';
 import Github from '../assets/Images/Github.svg';
+// import PersonImg from '../assets/Images/PersonImg.png';
 
 const Home = () => {
   const TechStack = [Html, Css, JS, Figma, Canva, MongoDB, Python, Github];

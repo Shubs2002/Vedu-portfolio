@@ -35,6 +35,7 @@ const Navbar = () => {
     <>
       <div id="NavBarSection" className={isScrolled ? 'scrolled' : ''}>
         <div className="logoname">Vedika&nbsp;<span className="primary-col-in-name">Sankhe</span></div>
+        
         <div
           className="navbar-container-logo"
           onMouseEnter={handleMouseEnter}

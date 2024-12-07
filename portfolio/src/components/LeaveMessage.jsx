@@ -10,7 +10,7 @@ const LeaveMessage = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    
     emailjs
       .sendForm('service_p5dyraj', 'template_j23w8jz', form.current, {
         publicKey: 'HF_KHktroXRZDZFcf',
